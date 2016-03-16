@@ -1,5 +1,5 @@
 # coding: utf-8
-from flask import Flask, request
+from flask import Flask, request, render_template
 from curtain_rc import rc
 app = Flask(__name__)
 
@@ -35,6 +35,11 @@ help_prompt = '''
 
 @app.route('/')
 def hello():
+    return render_template("index.html")
+
+
+@app.route('/api-help')
+def api_help():
     return help_prompt
 
 
