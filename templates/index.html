@@ -3,77 +3,90 @@
 <head>
   <title>卷帘大将——沙和尚</title>
 </head>
+<style>
+    .main{
+        position: relative;
+    }
+    .control{
+        position: relative;
+        height: 700px;
+        width: 900px;
+        background-image: url("{{ url_for("static", filename="img/background.png") }}");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .control-panel{
+        display: inline-block;
+    }
+    .control-panel-1{
+        position: absolute;
+        top: 210px;
+        left: 80px;
+    }
+    .control-panel-2{
+        position: absolute;
+        top: 370px;
+        left: 80px;
+    }
+    .control-panel-3{
+        position: absolute;
+        top: 530px;
+        left: 5px;
+    }
+    .control-btns{
+        text-align: center;
+        float: right;
+        height: 150px;
+        width: 35px;
+        border: 1px solid #ccc;
+        background-color: rgba(240,240,240,0.9) ;
+    }
+    .control-btns *{
+        display: block;
+        margin: auto;
+    }
+    .control-btns-stop{
+        position: relative;
+        bottom: -35px;
+    }
+    .control-btns-close{
+        position: relative;
+        bottom: -65px;
+    }
+</style>
 <body>
 
-<table border="1">
-  <tr>
-    <th>天丰利</th>
-    <th>中间</th>
-    <th>前台</th>
-  </tr>
-  <tr>
-    <td><p>B07</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A13</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A01</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B08</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A14</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A02</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B09</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A15</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A03</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B10</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A16</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A04</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B11</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B01</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A05</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B12</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B02</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A06</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B13</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B03</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A07</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B14</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B04</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A08</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B15</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B05</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A09</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B16</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>B06</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A10</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B00</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A00</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A11</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-  <tr>
-    <td><p>B00</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A00</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-    <td><p>A12</p><button type="button">开</button><button type="button">停</button><button type="button">关</button></td>
-  </tr>
-</table>
+<div class="main">
+    <div class="control">
+        <div class="control-panel control-panel-1">
+            <div class="control-btns" v-for="item in control" v-if="item.position == 0">
+                <span v-text="item.ab+item.label"></span>
+                <button class="control-btns-open" v-on:click="order(item.ab,item.label,'open')">开</button>
+                <button class="control-btns-stop" v-on:click="order(item.ab,item.label,'stop')">停</button>
+                <button class="control-btns-close" v-on:click="order(item.ab,item.label,'close')">关</button>
+            </div>
+        </div>
+        <div class="control-panel control-panel-2">
+            <div class="control-btns" v-for="item in control" v-if="item.position == 1">
+                <span v-text="item.ab+item.label"></span>
+                <button class="control-btns-open" v-on:click="order(item.ab,item.label,'open')">开</button>
+                <button class="control-btns-stop" v-on:click="order(item.ab,item.label,'stop')">停</button>
+                <button class="control-btns-close" v-on:click="order(item.ab,item.label,'close')">关</button>
+            </div>
+        </div>
+        <div class="control-panel control-panel-3">
+            <div class="control-btns" v-for="item in control" v-if="item.position == 2">
+                <span v-text="item.ab+item.label"></span>
+                <button class="control-btns-open" v-on:click="order(item.ab,item.label,'open')">开</button>
+                <button class="control-btns-stop" v-on:click="order(item.ab,item.label,'stop')">停</button>
+                <button class="control-btns-close" v-on:click="order(item.ab,item.label,'close')">关</button>
+            </div>
+        </div>
+    </div>
+</div>
 <a href="http://cl.xcf.io:8080/api-help">如果你想用 API 控制</a>
-  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/vue/1.0.8/vue.min.js"></script>
 <script type="text/javascript">
   function exeCMD(ab, number, op){
     $.ajax({
@@ -104,7 +117,179 @@
     }
     var number = args.slice(1,3)
     exeCMD(ab, number, op)
-  })
+  });
+    var vm = new Vue({
+        el:'.control',
+        data:{
+            control:[
+                {
+                    ab:'B',
+                    label:'07',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'08',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'09',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'10',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'11',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'12',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'13',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'14',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'15',
+                    position:0
+                },
+                {
+                    ab:'B',
+                    label:'16',
+                    position:0
+                },
+                {
+                    ab:'A',
+                    label:'13',
+                    position:1
+                },
+                {
+                    ab:'A',
+                    label:'14',
+                    position:1
+                },
+                {
+                    ab:'A',
+                    label:'15',
+                    position:1
+                },
+                {
+                    ab:'A',
+                    label:'16',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'01',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'02',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'03',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'04',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'05',
+                    position:1
+                },
+                {
+                    ab:'B',
+                    label:'06',
+                    position:1
+                },
+                {
+                    ab:'A',
+                    label:'01',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'02',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'03',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'04',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'05',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'06',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'07',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'08',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'09',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'10',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'11',
+                    position:2
+                },
+                {
+                    ab:'A',
+                    label:'12',
+                    position:2
+                }
+            ]
+        },
+        methods:{
+            order:function(ab,label,op){
+                exeCMD(ab, label, op);
+            }
+        }
+    });
 </script>
 </body>
 </html>
